@@ -31,3 +31,9 @@ header {
     margin-bottom: 10vh; 
     margin-top: 3vh; 
 }
+
+.add-tea {
+    margin-top: 10vh;
+    background-color: rgb(210, 217, 128);
+    color: black
+}
