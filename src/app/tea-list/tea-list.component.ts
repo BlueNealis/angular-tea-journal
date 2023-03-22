@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tea-list.component.css']
 })
 export class TeaListComponent {
-
+teas = [{name: "White Peony", type: "white", caffeine: "medium", id:1}];
 }
