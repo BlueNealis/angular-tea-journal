@@ -1,0 +1,16 @@
+.favorite-button {
+    border:none;
+    background-color: rgb(231, 104, 104);
+    color: white;
+    padding: 5%;
+    margin-top: 2%;
+    position: relative;
+    left: 25%;
+}
+
+.tea-container {
+    text-align: center;
+    width: 10vw; 
+    border:solid 2px ;
+    margin: 1rem;
+}

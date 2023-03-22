@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tea-detail',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./tea-detail.component.css']
 })
 export class TeaDetailComponent {
-
+addToFavorites() {
+  console.log("favorited")
+}
 }
