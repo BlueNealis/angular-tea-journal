@@ -1,4 +1,6 @@
 <div class="container">
-    <app-nav-bar></app-nav-bar>
-    <app-tea-list></app-tea-list>
+    <app-nav-bar (featureSelected)="onNavigate($event)"></app-nav-bar>
+    <app-tea-list *ngIf="loadedFeature === 'teas'"></app-tea-list>
+    <app-shopping-list *ngIf="loadedFeature === 'shopping-list'" ></app-shopping-list>
+    <app-tea-form *ngIf="loadedFeature === 'add-tea'"></app-tea-form>
 </div>

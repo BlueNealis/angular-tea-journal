@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./tea-detail.component.css']
 })
 export class TeaDetailComponent {
-addToFavorites() {
-  console.log("favorited")
+addToShoppingList() {
+  console.log("added")
 }
 }

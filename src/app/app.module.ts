@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TeaListComponent } from './tea-list/tea-list.component';
-import { TeaDetailComponent } from './tea-list/tea-detail/tea-detail.component';
+import { TeaDetailComponent } from './tea-detail/tea-detail.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TeaFormComponent } from './tea-form/tea-form.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TeaFormComponent } from './tea-form/tea-form.component';
     TeaListComponent,
     TeaDetailComponent,
     NavBarComponent,
-    TeaFormComponent
+    TeaFormComponent,
+    ShoppingListComponent
   ],
   imports: [
     BrowserModule

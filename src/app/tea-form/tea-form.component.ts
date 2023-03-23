@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./tea-form.component.css']
 })
 export class TeaFormComponent {
+  name: string ='';
+  type: string = '';
+  caffeine: string = '';
+  imagePath: string = '';
+  id: number = 0;
+  
+  addTea() {
 
+  }
 }
