@@ -7,6 +7,7 @@ import { TeaDetailComponent } from './tea-detail/tea-detail.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TeaFormComponent } from './tea-form/tea-form.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
     ShoppingListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

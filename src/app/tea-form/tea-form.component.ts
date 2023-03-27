@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Tea } from '../tea-detail/tea.model'
 
 @Component({
   selector: 'app-tea-form',
@@ -11,8 +12,11 @@ export class TeaFormComponent {
   caffeine: string = '';
   imagePath: string = '';
   id: number = 0;
-  
-  addTea() {
 
+  @Output() addTea = new EventEmitter<Tea>();
+
+  addNewTea(e: any) {
+    e.preventDefault
+    this.addTea.emit(new Tea(this.name, this.type, this.caffeine, this.imagePath, Math.random()))
   }
 }
