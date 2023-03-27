@@ -8,6 +8,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TeaFormComponent } from './tea-form/tea-form.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { FormsModule } from '@angular/forms';
+import { TeaDataService } from './services/teaData.service';
+import {Routes, RouterModule } from '@angular/router'
+
+const appRoutes: Routes = [{path: 'tea-form', component: TeaFormComponent }, 
+{path: '', component: TeaListComponent},
+{path: 'shopping-list', component: ShoppingListComponent},]
 
 @NgModule({
   declarations: [
@@ -19,9 +25,10 @@ import { FormsModule } from '@angular/forms';
     ShoppingListComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers:[TeaDataService,],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
