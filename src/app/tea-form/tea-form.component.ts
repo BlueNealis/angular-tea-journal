@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Tea } from '../tea-detail/tea.model'
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-tea-form',
@@ -7,16 +8,12 @@ import { Tea } from '../tea-detail/tea.model'
   styleUrls: ['./tea-form.component.css']
 })
 export class TeaFormComponent {
-  name: string ='';
-  type: string = '';
-  caffeine: string = '';
-  imagePath: string = '';
   id: number = 0;
 
   @Output() addTea = new EventEmitter<Tea>();
 
-  addNewTea(e: any) {
-    e.preventDefault
-    this.addTea.emit(new Tea(this.name, this.type, this.caffeine, this.imagePath, Math.random()))
+  addNewTea(e: NgForm) {
+    console.log('output',e.form.value['name'], e.form.value['type'], e.form.value['caffeine'], e.form.value['imagePath'], 6
+    this.addTea.emit(new Tea(e.form.value['name'], e.form.value['type'], e.form.value['caffeine'], e.form.value['imagePath'], 7))
   }
 }

@@ -1,23 +1,25 @@
-<div class="add-tea-form">
-    <label>Name:</label>
-    <h1>{{name}}</h1>
-    <input [(ngModel)]="name" type="text"/>
-    <label>Type:</label>
-    <select [(ngModel)] = "type">
-            <option>White</option>
-            <option>Green</option>
-            <option>Black</option>
-            <option>Herbal</option>
-            <option>Rooibos</option>
-    </select>
-    <label>Caffeine:</label>
-    <select [(ngModel)]= "caffeine">
-            <option>High</option>
-            <option>Medium</option>
-            <option>Low</option>
-            <option>None</option>
-    </select>
-    <label>ImagePath: </label>
-    <input [(ngModel)]= "imagePath" type="text"/>
-<button (click)="addNewTea($event)">Add Tea</button>
-</div>
+<form (ngSubmit)="addNewTea(f)" #f="ngForm">
+        <div class="add-tea-form">
+        <label>Name:</label>
+        <h1></h1>
+        <input ngModel name="name" type="text" required/>
+        <label>Type:</label>
+        <select ngModel name="type" required>
+                <option>White</option>
+                <option>Green</option>
+                <option>Black</option>
+                <option>Herbal</option>
+                <option>Rooibos</option>
+        </select>
+        <label>Caffeine:</label>
+        <select required ngModel name="caffeine">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+                <option>None</option>
+        </select>
+        <label>ImagePath: </label>
+        <input required ngModel name="imagePath" type="text"/>
+        <button [disabled] type="submit">Add Tea</button>
+        </div>
+</form>
